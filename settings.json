@@ -29,7 +29,7 @@
     "title_bar": {
         "show_branch_icon": true
     },
-    "buffer_font_family": "JetBrains Mono NL",
+    "buffer_font_family": "JetBrains Mono",
     "terminal": {
         "toolbar": {
             "breadcrumbs": false
@@ -51,6 +51,11 @@
     },
     "project_panel": {
         "indent_size": 14.0
+    },
+    "languages": {
+        "Python": {
+            "language_servers": ["pyrefly"]
+        }
     },
     "icon_theme": "Material Icon Theme",
     "ui_font_size": 15,
