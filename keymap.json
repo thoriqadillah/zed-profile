@@ -6,29 +6,44 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
-  {
-    "context": "Workspace",
-    "bindings": {
-      // "shift shift": "file_finder::Toggle"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      // "j k": "vim::NormalBefore"
-    }
-  },
-  {
-    "bindings": {}
-  },
-  {
-    "bindings": {
-      "ctrl-shift-o": [
-        "projects::OpenRecent",
-        {
-          "create_new_window": false
+    {
+        "context": "Workspace",
+        "bindings": {
+            // "shift shift": "file_finder::Toggle"
         }
-      ]
+    },
+    {
+        "context": "Editor && vim_mode == insert",
+        "bindings": {
+            // "j k": "vim::NormalBefore"
+        }
+    },
+    {
+        "bindings": {}
+    },
+    {
+        "bindings": {
+            "ctrl-shift-o": [
+                "projects::OpenRecent",
+                {
+                    "create_new_window": false
+                }
+            ]
+        }
+    },
+    {
+        "context": "((Editor && mode == full) && edit_prediction)",
+        "bindings": {}
+    },
+    {
+        "bindings": {
+            "ctrl-i": "editor::NextEditPrediction"
+        }
+    },
+    {
+        "context": "Editor",
+        "bindings": {
+            "ctrl-i": "editor::ShowCompletions"
+        }
     }
-  }
 ]
