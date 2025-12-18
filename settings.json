@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "colorize_brackets": false,
+    "extend_comment_on_newline": false,
+    "show_edit_predictions": true,
     "git": {
         "inline_blame": {
             "show_commit_summary": true
@@ -55,6 +58,9 @@
     "languages": {
         "Python": {
             "language_servers": ["pyrefly"]
+        },
+        "Proto": {
+            "format_on_save": "off"
         }
     },
     "icon_theme": "Material Icon Theme",
