@@ -7,36 +7,45 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "features": {
+        "edit_prediction_provider": "copilot",
+    },
+    "preview_tabs": {
+        "enable_preview_from_project_panel": true,
+    },
+    "git_panel": {
+        "sort_by_path": true,
+    },
     "colorize_brackets": false,
     "extend_comment_on_newline": false,
     "show_edit_predictions": true,
     "git": {
         "inline_blame": {
-            "show_commit_summary": true
-        }
+            "show_commit_summary": true,
+        },
     },
     "inlay_hints": {
         "enabled": true,
-        "show_type_hints": false
+        "show_type_hints": false,
     },
     "buffer_line_height": "comfortable",
     "telemetry": {
         "diagnostics": true,
-        "metrics": false
+        "metrics": false,
     },
     "tabs": {
         "show_diagnostics": "all",
         "git_status": true,
-        "file_icons": true
+        "file_icons": true,
     },
     "title_bar": {
-        "show_branch_icon": true
+        "show_branch_icon": true,
     },
     "buffer_font_family": "JetBrains Mono",
     "terminal": {
         "toolbar": {
-            "breadcrumbs": false
-        }
+            "breadcrumbs": false,
+        },
     },
     "tab_size": 4,
     "agent": {
@@ -44,24 +53,27 @@
         "default_profile": "ask",
         "default_model": {
             "provider": "copilot_chat",
-            "model": "gpt-5"
+            "model": "claude-sonnet-4.5",
         },
         "play_sound_when_agent_done": true,
-        "model_parameters": []
+        "model_parameters": [],
     },
     "outline_panel": {
-        "indent_size": 14.0
+        "indent_size": 14.0,
     },
     "project_panel": {
-        "indent_size": 14.0
+        "indent_size": 14.0,
     },
     "languages": {
         "Python": {
-            "language_servers": ["pyrefly"]
+            "language_servers": ["pyrefly"],
         },
         "Proto": {
-            "format_on_save": "off"
-        }
+            "format_on_save": "off",
+        },
+        "Vue.js": {
+            "language_servers": ["vtsls", "vue-language-server"],
+        },
     },
     "icon_theme": "Material Icon Theme",
     "ui_font_size": 15,
@@ -69,6 +81,6 @@
     "theme": {
         "mode": "system",
         "light": "One Light",
-        "dark": "Dracula"
-    }
+        "dark": "Dracula",
+    },
 }
