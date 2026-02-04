@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
     "features": {
-        "edit_prediction_provider": "copilot",
+        "edit_prediction_provider": "zed",
     },
     "preview_tabs": {
         "enable_preview_from_project_panel": true,
@@ -22,7 +22,9 @@
     "extend_comment_on_newline": false,
     "show_edit_predictions": true,
     "git": {
+        "hunk_style": "staged_hollow",
         "inline_blame": {
+            "padding": 7,
             "show_commit_summary": true,
         },
     },
@@ -61,6 +63,7 @@
         "model_parameters": [],
     },
     "outline_panel": {
+        "git_status": true,
         "indent_size": 14.0,
     },
     "project_panel": {
@@ -68,9 +71,12 @@
     },
     "languages": {
         "Python": {
-            "language_servers": ["pyrefly"],
+            "language_servers": ["basedpyright"],
         },
         "Proto": {
+            "format_on_save": "off",
+        },
+        "YAML": {
             "format_on_save": "off",
         },
         "Vue.js": {

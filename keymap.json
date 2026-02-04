@@ -10,40 +10,46 @@
         "context": "Workspace",
         "bindings": {
             // "shift shift": "file_finder::Toggle"
-        }
+        },
+    },
+    {
+        "context": "ProjectPanel || GitPanel",
+        "bindings": {
+            "ctrl-w": ["workspace::SendKeystrokes", "ctrl-k ctrl-right ctrl-w"],
+        },
     },
     {
         "context": "Editor && vim_mode == insert",
         "bindings": {
             // "j k": "vim::NormalBefore"
-        }
+        },
     },
     {
-        "bindings": {}
+        "bindings": {},
     },
     {
         "bindings": {
             "ctrl-shift-o": [
                 "projects::OpenRecent",
                 {
-                    "create_new_window": false
-                }
-            ]
-        }
+                    "create_new_window": false,
+                },
+            ],
+        },
     },
     {
         "context": "((Editor && mode == full) && edit_prediction)",
-        "bindings": {}
+        "bindings": {},
     },
     {
         "bindings": {
-            "ctrl-i": "editor::NextEditPrediction"
-        }
+            "ctrl-i": "editor::NextEditPrediction",
+        },
     },
     {
         "context": "Editor",
         "bindings": {
-            "ctrl-i": "editor::ShowCompletions"
-        }
-    }
+            "ctrl-i": "editor::ShowCompletions",
+        },
+    },
 ]
