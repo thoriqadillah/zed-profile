@@ -7,91 +7,112 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-    "sticky_scroll": {
-        "enabled": true,
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "edit_predictions": {
+    "provider": "copilot"
+  },
+  "preview_tabs": {
+    "enable_preview_from_project_panel": true
+  },
+  "git_panel": {
+    "status_style": "label_color",
+    "tree_view": true,
+    "sort_by_path": true
+  },
+  "colorize_brackets": false,
+  "extend_comment_on_newline": false,
+  "show_edit_predictions": true,
+  "git": {
+    "hunk_style": "staged_hollow",
+    "inline_blame": {
+      "padding": 7,
+      "show_commit_summary": true
+    }
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": false
+  },
+  "buffer_line_height": "comfortable",
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false
+  },
+  "tabs": {
+    "show_diagnostics": "all",
+    "git_status": true,
+    "file_icons": true
+  },
+  "title_bar": {
+    "show_branch_icon": true
+  },
+  "buffer_font_family": "JetBrains Mono",
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    }
+  },
+  "tab_size": 4,
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.5"
     },
-    "edit_predictions": {
-        "provider": "zed",
+    "play_sound_when_agent_done": true,
+    "model_parameters": []
+  },
+  "outline_panel": {
+    "git_status": true,
+    "indent_size": 14.0
+  },
+  "project_panel": {
+    "indent_size": 14.0
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["basedpyright"]
     },
-    "preview_tabs": {
-        "enable_preview_from_project_panel": true,
+    "Proto": {
+      "format_on_save": "off"
     },
-    "git_panel": {
-        "status_style": "label_color",
-        "tree_view": true,
-        "sort_by_path": true,
+    "YAML": {
+      "prettier": {
+        "allowed": false
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ]
     },
-    "colorize_brackets": false,
-    "extend_comment_on_newline": false,
-    "show_edit_predictions": true,
-    "git": {
-        "hunk_style": "staged_hollow",
-        "inline_blame": {
-            "padding": 7,
-            "show_commit_summary": true,
-        },
+    "Vue.js": {
+      "language_servers": ["vtsls", "vue-language-server"]
     },
-    "inlay_hints": {
-        "enabled": true,
-        "show_type_hints": false,
-    },
-    "buffer_line_height": "comfortable",
-    "telemetry": {
-        "diagnostics": true,
-        "metrics": false,
-    },
-    "tabs": {
-        "show_diagnostics": "all",
-        "git_status": true,
-        "file_icons": true,
-    },
-    "title_bar": {
-        "show_branch_icon": true,
-    },
-    "buffer_font_family": "JetBrains Mono",
-    "terminal": {
-        "toolbar": {
-            "breadcrumbs": false,
-        },
-    },
-    "tab_size": 4,
-    "agent": {
-        "always_allow_tool_actions": true,
-        "default_profile": "ask",
-        "default_model": {
-            "provider": "copilot_chat",
-            "model": "claude-sonnet-4.5",
-        },
-        "play_sound_when_agent_done": true,
-        "model_parameters": [],
-    },
-    "outline_panel": {
-        "git_status": true,
-        "indent_size": 14.0,
-    },
-    "project_panel": {
-        "indent_size": 14.0,
-    },
-    "languages": {
-        "Python": {
-            "language_servers": ["basedpyright"],
-        },
-        "Proto": {
-            "format_on_save": "off",
-        },
-        "YAML": {
-            "format_on_save": "off",
-        },
-        "Vue.js": {
-            "language_servers": ["vtsls", "vue-language-server"],
-        },
-    },
-    "icon_theme": "Material Icon Theme",
-    "ui_font_size": 15,
-    "buffer_font_size": 14,
-    "theme": {
-        "mode": "system",
-        "light": "One Light",
-        "dark": "Dracula",
-    },
+    "JSONC": {
+      "prettier": {
+        "allowed": false
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ]
+    }
+  },
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 15,
+  "buffer_font_size": 14,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Dracula"
+  }
 }
