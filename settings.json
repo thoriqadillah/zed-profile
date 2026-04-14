@@ -7,19 +7,36 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
+  "auto_update_extensions": {
+    "proto": false,
+  },
   "sticky_scroll": {
-    "enabled": true
+    "enabled": true,
   },
   "edit_predictions": {
-    "provider": "copilot"
+    "provider": "zed",
   },
   "preview_tabs": {
-    "enable_preview_from_project_panel": true
+    "enable_preview_from_project_panel": true,
   },
   "git_panel": {
+    "file_icons": true,
     "status_style": "label_color",
     "tree_view": true,
-    "sort_by_path": true
+    "sort_by_path": true,
   },
   "colorize_brackets": false,
   "extend_comment_on_newline": false,
@@ -28,84 +45,87 @@
     "hunk_style": "staged_hollow",
     "inline_blame": {
       "padding": 7,
-      "show_commit_summary": true
-    }
+      "show_commit_summary": true,
+    },
   },
   "inlay_hints": {
     "enabled": true,
-    "show_type_hints": false
+    "show_type_hints": false,
   },
   "buffer_line_height": "comfortable",
   "telemetry": {
     "diagnostics": true,
-    "metrics": false
+    "metrics": false,
   },
   "tabs": {
     "show_diagnostics": "all",
     "git_status": true,
-    "file_icons": true
+    "file_icons": true,
   },
   "title_bar": {
-    "show_branch_icon": true
+    "show_branch_icon": true,
   },
   "buffer_font_family": "JetBrains Mono",
   "terminal": {
     "toolbar": {
-      "breadcrumbs": false
-    }
+      "breadcrumbs": false,
+    },
   },
   "tab_size": 4,
   "agent": {
-    "always_allow_tool_actions": true,
+    "tool_permissions": {
+      "default": "allow",
+    },
     "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5"
+      "model": "claude-sonnet-4.6",
     },
     "play_sound_when_agent_done": true,
-    "model_parameters": []
+    "model_parameters": [],
   },
   "outline_panel": {
     "git_status": true,
-    "indent_size": 14.0
+    "indent_size": 14.0,
   },
   "project_panel": {
-    "indent_size": 14.0
+    "indent_size": 14.0,
   },
   "languages": {
     "Python": {
-      "language_servers": ["basedpyright"]
+      "language_servers": ["basedpyright"],
     },
     "Proto": {
-      "format_on_save": "off"
+      "format_on_save": "off",
     },
     "YAML": {
+      "format_on_save": "off",
       "prettier": {
-        "allowed": false
+        "allowed": false,
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt"
-          }
-        }
-      ]
+            "name": "oxfmt",
+          },
+        },
+      ],
     },
     "Vue.js": {
-      "language_servers": ["vtsls", "vue-language-server"]
+      "language_servers": ["vtsls", "vue-language-server"],
     },
     "JSONC": {
       "prettier": {
-        "allowed": false
+        "allowed": false,
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt"
-          }
-        }
-      ]
-    }
+            "name": "oxfmt",
+          },
+        },
+      ],
+    },
   },
   "icon_theme": "Material Icon Theme",
   "ui_font_size": 15,
@@ -113,6 +133,6 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Dracula"
-  }
+    "dark": "Dracula",
+  },
 }
