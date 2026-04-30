@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cli_default_open_behavior": "existing_window",
+  "collaboration_panel": {
+    "dock": "left"
+  },
   "diagnostics": {
     "inline": {
       "enabled": true
@@ -21,118 +25,142 @@
     }
   },
   "auto_update_extensions": {
-    "proto": false,
+    "vue": false,
+    "proto": false
   },
   "sticky_scroll": {
-    "enabled": true,
+    "enabled": true
   },
   "edit_predictions": {
-    "provider": "zed",
+    "provider": "zed"
   },
   "preview_tabs": {
-    "enable_preview_from_project_panel": true,
+    "enable_preview_from_project_panel": true
   },
   "git_panel": {
+    "show_count_badge": true,
+    "fallback_branch_name": "master",
+    "dock": "left",
     "file_icons": true,
     "status_style": "label_color",
-    "tree_view": true,
-    "sort_by_path": true,
+    "tree_view": false,
+    "sort_by_path": true
   },
-  "colorize_brackets": false,
+  "colorize_brackets": true,
   "extend_comment_on_newline": false,
   "show_edit_predictions": true,
   "git": {
     "hunk_style": "staged_hollow",
     "inline_blame": {
       "padding": 7,
-      "show_commit_summary": true,
-    },
+      "show_commit_summary": true
+    }
   },
   "inlay_hints": {
     "enabled": true,
-    "show_type_hints": false,
+    "show_type_hints": false
   },
   "buffer_line_height": "comfortable",
   "telemetry": {
     "diagnostics": true,
-    "metrics": false,
+    "metrics": false
   },
   "tabs": {
     "show_diagnostics": "all",
     "git_status": true,
-    "file_icons": true,
+    "file_icons": true
   },
   "title_bar": {
-    "show_branch_icon": true,
+    "show_branch_status_icon": true
   },
   "buffer_font_family": "JetBrains Mono",
   "terminal": {
+    "show_count_badge": true,
     "toolbar": {
-      "breadcrumbs": false,
-    },
+      "breadcrumbs": false
+    }
   },
   "tab_size": 4,
   "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
     "tool_permissions": {
-      "default": "allow",
+      "default": "allow"
     },
     "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.6",
+      "model": "claude-sonnet-4.6"
     },
-    "play_sound_when_agent_done": true,
-    "model_parameters": [],
+    "play_sound_when_agent_done": "always",
+    "model_parameters": []
   },
   "outline_panel": {
+    "dock": "left",
     "git_status": true,
-    "indent_size": 14.0,
+    "indent_size": 14.0
   },
   "project_panel": {
-    "indent_size": 14.0,
+    "bold_folder_labels": false,
+    "diagnostic_badges": true,
+    "git_status_indicator": true,
+    "dock": "left",
+    "indent_size": 14.0
   },
   "languages": {
     "Python": {
-      "language_servers": ["basedpyright"],
+      "language_servers": ["basedpyright"]
     },
     "Proto": {
       "format_on_save": "off",
+      "language_servers": ["protobuf-language-server"]
     },
     "YAML": {
       "format_on_save": "off",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
+            "name": "oxfmt"
+          }
+        }
+      ]
     },
     "Vue.js": {
-      "language_servers": ["vtsls", "vue-language-server"],
+      "language_servers": ["vtsls", "vue-language-server"]
     },
     "JSONC": {
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
-    },
+            "name": "oxfmt"
+          }
+        }
+      ]
+    }
   },
-  "icon_theme": "Material Icon Theme",
+  "lsp": {
+    "protobuf-language-server": {
+      "binary": {
+        "path": "/home/thoriqadillah/.cargo/bin/protobuf-lsp"
+      }
+    }
+  },
+  "icon_theme": {
+    "mode": "light",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme"
+  },
   "ui_font_size": 15,
   "buffer_font_size": 14,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
-    "dark": "Dracula",
-  },
+    "dark": "Dracula"
+  }
 }
