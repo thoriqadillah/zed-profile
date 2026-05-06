@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "diff_view_style": "split",
+  "minimap": {
+    "show": "never"
+  },
+  "text_rendering_mode": "platform_default",
   "cli_default_open_behavior": "existing_window",
   "collaboration_panel": {
     "dock": "left"
@@ -44,7 +49,7 @@
     "file_icons": true,
     "status_style": "label_color",
     "tree_view": false,
-    "sort_by_path": true
+    "sort_by_path": false
   },
   "colorize_brackets": true,
   "extend_comment_on_newline": false,
@@ -60,7 +65,9 @@
     "enabled": true,
     "show_type_hints": false
   },
-  "buffer_line_height": "comfortable",
+  "buffer_line_height": {
+    "custom": 1.6180000305175781
+  },
   "telemetry": {
     "diagnostics": true,
     "metrics": false
@@ -75,7 +82,7 @@
   },
   "buffer_font_family": "JetBrains Mono",
   "terminal": {
-    "show_count_badge": true,
+    "show_count_badge": false,
     "toolbar": {
       "breadcrumbs": false
     }
@@ -127,9 +134,6 @@
           }
         }
       ]
-    },
-    "Vue.js": {
-      "language_servers": ["vtsls", "vue-language-server"]
     },
     "JSONC": {
       "prettier": {
