@@ -45,7 +45,7 @@
   {
     "bindings": {
       "ctrl-i": "editor::NextEditPrediction",
-      "ctrl-alt-f": "outline::Toggle"
+      "ctrl-alt-o": "outline::Toggle"
     }
   },
   {
