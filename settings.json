@@ -7,6 +7,22 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "context_servers": {
+    "mcp-server-context7": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "context7_api_key": "ctx7sk-e17bd767-8647-4f67-acf0-dc6dcf4268cc"
+      }
+    },
+    "mcp-server-figma": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "figma_api_key": "YOUR_FIGMA_ACCESS_TOKEN"
+      }
+    }
+  },
   "status_bar": {
     "show_active_file": false
   },
@@ -28,13 +44,23 @@
     }
   },
   "agent_servers": {
+    "kimi": {
+      "type": "registry"
+    },
     "github-copilot-cli": {
+      "default_config_options": {
+        "mode": "https://agentclientprotocol.com/protocol/session-modes#plan",
+        "model": "claude-opus-4.6"
+      },
       "type": "registry"
     },
     "claude-acp": {
       "type": "registry"
     },
     "codex-acp": {
+      "default_config_options": {
+        "reasoning_effort": "high"
+      },
       "type": "registry"
     }
   },
@@ -52,6 +78,8 @@
     "enable_preview_from_project_panel": true
   },
   "git_panel": {
+    "sort_by": "path",
+    "group_by": "staging",
     "show_count_badge": true,
     "fallback_branch_name": "master",
     "dock": "left",
@@ -93,6 +121,7 @@
   },
   "buffer_font_family": "JetBrains Mono",
   "terminal": {
+    "font_size": 14.0,
     "show_count_badge": false,
     "toolbar": {
       "breadcrumbs": false
@@ -100,6 +129,7 @@
   },
   "tab_size": 4,
   "agent": {
+    "use_modifier_to_send": false,
     "sidebar_side": "right",
     "dock": "right",
     "tool_permissions": {
@@ -146,8 +176,13 @@
         }
       ]
     },
+    "TypeScript": {
+      "language_servers": ["typescript-ls", "!vtsls", "!typescript-language-server"],
+      "format_on_save": "on"
+    },
     "Vue.js": {
-      "language_servers": ["vtsls", "vue-language-server"]
+      "language_servers": ["typescript-ls", "!vtsls", "!vue-language-server", "!typescript-language-server"],
+      "format_on_save": "on"
     },
     "JSONC": {
       "prettier": {
@@ -160,13 +195,28 @@
           }
         }
       ]
-    }
+    },
+    "Go": {
+        "language_servers": ["gopls", "golangci-lint"]
+    },
   },
   "lsp": {
     "protobuf-language-server": {
       "binary": {
         "path": "/home/thoriqadillah/.cargo/bin/protobuf-lsp"
       }
+    },
+    "golangci-lint": {
+        "initialization_options": {
+            "command": [
+                "golangci-lint",
+                "run",
+                "--output.json.path",
+                "stdout",
+                "--show-stats=false",
+                "--output.text.path="
+            ]
+        }
     }
   },
   "icon_theme": {
@@ -174,7 +224,7 @@
     "light": "Material Icon Theme",
     "dark": "Material Icon Theme"
   },
-  "ui_font_size": 15,
+  "ui_font_size": 17,
   "buffer_font_size": 14,
   "git_commit_buffer_font_size": 12,
   "theme": {
