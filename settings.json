@@ -14,13 +14,6 @@
       "settings": {
         "context7_api_key": "ctx7sk-e17bd767-8647-4f67-acf0-dc6dcf4268cc"
       }
-    },
-    "mcp-server-figma": {
-      "enabled": true,
-      "remote": false,
-      "settings": {
-        "figma_api_key": "YOUR_FIGMA_ACCESS_TOKEN"
-      }
     }
   },
   "status_bar": {
@@ -44,6 +37,14 @@
     }
   },
   "agent_servers": {
+    "opencode": {
+      "default_config_options": {
+        "effort": "max",
+        "mode": "build",
+        "model": "opencode/deepseek-v4-flash-free"
+      },
+      "type": "registry"
+    },
     "kimi": {
       "type": "registry"
     },
@@ -55,11 +56,14 @@
       "type": "registry"
     },
     "claude-acp": {
+      "default_config_options": {
+        "model": "opus[1m]"
+      },
       "type": "registry"
     },
     "codex-acp": {
       "default_config_options": {
-        "reasoning_effort": "high"
+        "reasoning_effort": "medium"
       },
       "type": "registry"
     }
@@ -135,7 +139,7 @@
     "tool_permissions": {
       "default": "allow"
     },
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4.6"
@@ -177,12 +181,12 @@
       ]
     },
     "TypeScript": {
-      "language_servers": ["typescript-ls", "!vtsls", "!typescript-language-server"],
-      "format_on_save": "on"
+      "language_servers": ["vtsls", "oxlint", "eslint", "!typescript-ls", "!typescript-language-server"],
+      "format_on_save": "on",
     },
     "Vue.js": {
-      "language_servers": ["typescript-ls", "!vtsls", "!vue-language-server", "!typescript-language-server"],
-      "format_on_save": "on"
+      "language_servers": ["typescript-ls", "vtsls", "oxlint", "eslint", "!vue-language-server", "!typescript-language-server"],
+      "format_on_save": "on",
     },
     "JSONC": {
       "prettier": {
@@ -217,7 +221,7 @@
                 "--output.text.path="
             ]
         }
-    }
+    },
   },
   "icon_theme": {
     "mode": "light",
